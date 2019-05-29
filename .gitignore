@@ -1,0 +1,5 @@
+appsetings.*
+bin/*
+obj/*
+Properties/*
+.vscode/*
