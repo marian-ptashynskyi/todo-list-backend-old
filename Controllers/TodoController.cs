@@ -21,6 +21,8 @@ namespace todo_list_backend.Controllers
             if (_context.TodoItems.Count() == 0) 
             {
                 _context.TodoItems.Add(new TodoItem { Name = "Item 1" });
+                _context.TodoItems.Add(new TodoItem { Name = "Item 2" });
+                _context.TodoItems.Add(new TodoItem { Name = "Item 3" });
                 _context.SaveChanges();
             }
         }
@@ -84,7 +86,7 @@ namespace todo_list_backend.Controllers
 
             _context.TodoItems.Remove(todoItem);
             await _context.SaveChangesAsync();
-
+            
             return NoContent();
         }
     }
